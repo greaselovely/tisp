@@ -175,7 +175,6 @@ def sji(job_id: str) -> None:
 			else:
 				print(job_dict)
 			if status == "FIN":
-				# print(f"{status_dict.get(status)}")
 				return
 		except AttributeError:
 			break
