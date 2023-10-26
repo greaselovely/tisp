@@ -175,6 +175,7 @@ def sji(job_id: str) -> None:
 			else:
 				print(job_dict)
 			if status == "FIN":
+				# print(f"{status_dict.get(status)}")
 				return
 		except AttributeError:
 			break
@@ -231,7 +232,6 @@ def main():
 		fw_ip = input("[?]\tEnter FW IP Address: ")
 		fw_username = input("[?]\tEnter your username: ")
 		fw_password = getpass.getpass("[?]\tEnter your password: ")
-		fw_password = urllib.parse.quote(fw_password)   # do we need to urlencode the password if it's not sent in the url string?
 		fw_api_key = None
 		
 	api_url = f"https://{fw_ip}/api"
